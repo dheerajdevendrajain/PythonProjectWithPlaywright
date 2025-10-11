@@ -11,7 +11,7 @@ def test_e2e_web_api(playwright: Playwright):
     context = browser.new_context()
     page = context.new_page()
 
-    with open('data/credentials.json') as f:
+    with open('D:\\workspace\\PythonProjectWithPlaywright\\playwright\\data\\credentials.json') as f:
         test_data = json.load(f)
         print(test_data)
         user_credentials_list = test_data['user_credentials']

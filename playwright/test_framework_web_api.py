@@ -2,14 +2,14 @@ import json
 import pytest
 from playwright.sync_api import Playwright
 from pageObjects.login import LoginPage
-from utils.apiBase import APIUtils
+from utils.apiBaseFramework import APIUtils
 
 with open('D:\\workspace\\PythonProjectWithPlaywright\\playwright\\data\\credentials.json') as f:
     test_data = json.load(f)
     print(test_data)
     user_credentials_list = test_data['user_credentials']
 
-
+@pytest.mark.smoke
 @pytest.mark.parametrize('user_credentials', user_credentials_list)
 def test_e2e_framework_web_api(playwright: Playwright, browserInstance, user_credentials):
     username = user_credentials['userEmail']
