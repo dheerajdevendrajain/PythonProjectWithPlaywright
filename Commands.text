@@ -1,0 +1,11 @@
+pytest test_framework_web_api.py --browser_name chrome -> run on specific browser
+pytest -> run all test cases
+pytest -m smoke -> run testcases specific tag
+pytest -k web_api -> run testcases with methods containing this method name
+pip3 install pytest-xdist -> install parallel execution plugin
+pytest -n 3 -> run 3 testcases in parallel
+pip install pytest-html -> install html report plugin
+pytest -n 3 --html=report.html -> run parallel testcases with html reports
+pytest -n 3 --tracing on --html=report.htmlcls
+
+pytest --browser chrome -m smoke -n 3 --tracing on --html=report.html
